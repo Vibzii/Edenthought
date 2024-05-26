@@ -1,0 +1,19 @@
+{% extends "journal/navbar.html" %}
+{% load crispy_forms_tags %}
+
+
+
+    {% block content %}
+        <div class="container bg-white shadow-md p-5 form-layout ">
+            <br>
+            <h1>Dashboard</h1>
+            {{user}}
+            <br>
+            <br>
+            <img style="width:70px; height=70px;" src = "{{profilePic.profile_pic.url}}">
+            <br>
+            <hr>
+            <a href="{% url 'user-logout' %}">Logout  </a>
+        </div>
+
+    {% endblock %}
